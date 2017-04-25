@@ -12,7 +12,7 @@ namespace Selenium
     class Program
     {
         //creating the reference for our browser
-        IWebDriver driver = new ChromeDriver();
+        //IWebPropertiesCollection.driver PropertiesCollection.driver = new ChromePropertiesCollection.driver();
 
         static void Main(string[] args)
         {
@@ -25,12 +25,14 @@ namespace Selenium
         {
             /*
             //Navigate to google page
-            driver.Navigate().GoToUrl("http://www.google.com");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://www.google.com");
             Console.WriteLine("Opened URL");
             */
 
+            PropertiesCollection.driver = new ChromeDriver();
+
             //Navigate to google page
-            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&amp;Password=&amp;Login=Login﻿");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&amp;Password=&amp;Login=Login﻿");
             Console.WriteLine("Opened URL");
 
         }
@@ -41,18 +43,18 @@ namespace Selenium
 
             //selecting the title
             //going to call the custom method that i made
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown( "TitleId", "Mr.", PropertyType.Id);
 
             //initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "executeautomation", PropertyType.Name);
 
             //testing out get method
-            Console.WriteLine("The value from my Title is:" + SeleniumGetMethods.GetText(driver, "TitleId","Id"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDown("TitleId", PropertyType.Id));
 
-            Console.WriteLine("The value from my Initial is:" + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
 
             //The click button
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click("Save", PropertyType.Name);
 
 
             /*
@@ -60,7 +62,7 @@ namespace Selenium
 
             //to find this you go to chrome, inspect elements after rigth clicking
             //and then find the text box and the name for the text box which is "q"
-            IWebElement element = driver.FindElement(By.Name("q"));
+            IWebElement element = PropertiesCollection.driver.FindElement(By.Name("q"));
 
             //What will actually get send to the google search text box
             element.SendKeys("This is the shit!!!");
@@ -79,7 +81,7 @@ namespace Selenium
         public void CleanUp()
         {
             //closes the browser for you after its done with everything
-            driver.Close();
+            PropertiesCollection.driver.Close();
             Console.WriteLine("Closed the browser");
         }
 

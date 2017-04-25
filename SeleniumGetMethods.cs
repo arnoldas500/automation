@@ -12,28 +12,28 @@ namespace Selenium
     {
         //method for getting values like text out of webpage
         //will be returning a string
-        public static string GetText(IWebDriver driver, string element, string elementType)
+        public static string GetText(string element, PropertyType elementType)
         {
-            if (elementType == "Id")
-                return driver.FindElement(By.Id(element)).GetAttribute("value");
-            if (elementType == "Name")
-                return driver.FindElement(By.Name(element)).GetAttribute("value");
+            if (elementType == PropertyType.Id)
+                return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
+            if (elementType == PropertyType.Name)
+                return PropertiesCollection.driver.FindElement(By.Name(element)).GetAttribute("value");
             else return String.Empty;
         }
 
         //method for getting values like text out of webpage
         //will be returning a string
-        public static string GetTextFromDropDown(IWebDriver driver, string element, string elementType)
+        public static string GetTextFromDropDown(string element, PropertyType elementType)
         {
-            if (elementType == "Id")
-                return new SelectElement(driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
-            if (elementType == "Name")
-                return new SelectElement(driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
+            if (elementType == PropertyType.Id)
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
+            if (elementType == PropertyType.Name)
+                return new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
             else return String.Empty;
         }
 
         /*
-        internal static string GetText(IWebDriver driver, string v1, string v2)
+        internal static string GetText(IWebPropertiesCollection.driver PropertiesCollection.driver, string v1, string v2)
         {
             throw new NotImplementedException();
         }
