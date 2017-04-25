@@ -46,6 +46,11 @@ namespace Selenium
             //initial
             SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
 
+            //testing out get method
+            Console.WriteLine("The value from my Title is:" + SeleniumGetMethods.GetText(driver, "TitleId","Id"));
+
+            Console.WriteLine("The value from my Initial is:" + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+
             //The click button
             SeleniumSetMethods.Click(driver, "Save", "Name");
 
