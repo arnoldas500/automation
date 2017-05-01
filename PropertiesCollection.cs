@@ -14,7 +14,8 @@ namespace Selenium
         Name,
         LinkText,
         CssName,
-        ClassName
+        ClassName,
+        CssSelector
     }
 
     class PropertiesCollection

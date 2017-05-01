@@ -32,7 +32,8 @@ namespace Selenium
             PropertiesCollection.driver = new ChromeDriver();
 
             //Navigate to google page
-            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&amp;Password=&amp;Login=Login﻿");
+            //PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&amp;Password=&amp;Login=Login﻿");
+            PropertiesCollection.driver.Navigate().GoToUrl("https://www.pdfmerge.com/﻿");
             Console.WriteLine("Opened URL");
 
         }
@@ -44,10 +45,24 @@ namespace Selenium
             //first need to initliza the page by calling its reference
             EAPageObject page = new EAPageObject();
 
-            //can now directly pass text that we want to use
-            page.txtInitial.SendKeys("executeautomation");
+            //page.btnChooseFl.Click();
 
-            page.btnSave.Click();
+            page.fileUploads1.SendKeys("C:/Users/User/Desktop/OSF_CFP_2017[1071].pdf");
+            page.fileUploads2.SendKeys("C:/Users/User/Desktop/OSF-CFP-2017.pdf");
+            
+
+            page.btnMerge.Click();
+
+            /*
+         * 
+         WebElement El = driver.findElement(By.id("'fileUploadField'"));
+         El.sendKeys("c:\\temp\\test.txt");
+        */
+
+            //can now directly pass text that we want to use
+            //page.txtInitial.SendKeys("executeautomation");
+
+            //page.btnSave.Click();
 
             /*
              * dont need these anymore since we created EAPageObject
@@ -94,7 +109,7 @@ namespace Selenium
         public void CleanUp()
         {
             //closes the browser for you after its done with everything
-            PropertiesCollection.driver.Close();
+            //PropertiesCollection.driver.Close();
             Console.WriteLine("Closed the browser");
         }
 
