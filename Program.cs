@@ -41,6 +41,16 @@ namespace Selenium
         public void ExecuteTest()
         {
 
+            //first need to initliza the page by calling its reference
+            EAPageObject page = new EAPageObject();
+
+            //can now directly pass text that we want to use
+            page.txtInitial.SendKeys("executeautomation");
+
+            page.btnSave.Click();
+
+            /*
+             * dont need these anymore since we created EAPageObject
             //selecting the title
             //going to call the custom method that i made
             SeleniumSetMethods.SelectDropDown( "TitleId", "Mr.", PropertyType.Id);
@@ -55,7 +65,10 @@ namespace Selenium
 
             //The click button
             SeleniumSetMethods.Click("Save", PropertyType.Name);
+            /*
 
+            
+            
 
             /*
             //EnterText(element, value, type)
