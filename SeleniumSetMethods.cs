@@ -18,6 +18,8 @@ namespace Selenium
                 PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value);
             if (elementType == PropertyType.Name)
                 PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value);
+            //if (elementType == PropertyType.tabindex)
+                //PropertiesCollection.driver.FindElement(By.tabindex(element)).SendKeys(value);
         }
 
         //click operation inro a button, checkbox, option, etc
