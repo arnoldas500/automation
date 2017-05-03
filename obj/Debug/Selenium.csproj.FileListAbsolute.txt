@@ -1,0 +1,14 @@
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\chromedriver.exe
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\chromedriver-license.txt
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\Selenium.exe.config
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\Selenium.exe
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\Selenium.pdb
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\WebDriver.dll
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\WebDriver.xml
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\obj\Debug\Selenium.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\obj\Debug\Selenium.exe
+c:\users\user\documents\visual studio 2017\Projects\Selenium\Selenium\obj\Debug\Selenium.pdb
+C:\Users\User\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\nunit.framework.dll
+C:\Users\User\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\WebDriver.Support.dll
+C:\Users\User\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\nunit.framework.xml
+C:\Users\User\documents\visual studio 2017\Projects\Selenium\Selenium\bin\Debug\WebDriver.Support.xml
