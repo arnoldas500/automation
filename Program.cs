@@ -99,11 +99,13 @@ namespace Selenium
         */
         }
 
+        /*
         [Test]
         public void NextTest()
         {
             Console.WriteLine("This is the next test");
         }
+        */
 
         [TearDown]
         public void CleanUp()
