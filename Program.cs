@@ -26,6 +26,7 @@ using System.Drawing.Imaging;
 using System.Net;
 using System.Threading;
 using OpenQA.Selenium.Remote;
+using System.Drawing;
 
 namespace Selenium
 {
@@ -66,7 +67,7 @@ namespace Selenium
             driver.Quit();
             */
 
-            
+
 
             /*
             var chromeOptions = new ChromeOptions();
@@ -77,22 +78,28 @@ namespace Selenium
 
             var opts = new PhantomJSOptions();
             */
+            
         }
 
         [SetUp]
         public void Initilize()
         {
+           
             /*
             //Navigate to google page
             PropertiesCollection.driver.Navigate().GoToUrl("http://www.google.com");
             Console.WriteLine("Opened URL");
             */
             ChromeOptions options = new ChromeOptions();
-            options.AddArguments("--headless");
+            //options.AddArguments("--headless");
+            //options.AddArguments("--no-startup-window");
 
             //ChromeDriver chromeDriver = new ChromeDriver(options);
-            //PropertiesCollection.driver = new ChromeDriver(options);
-            PropertiesCollection.driver = new RemoteWebDriver(DesiredCapabilities.HtmlUnitWithJavaScript());
+            PropertiesCollection.driver = new ChromeDriver();
+            
+            //PropertiesCollection.driver = new RemoteWebDriver(DesiredCapabilities.HtmlUnitWithJavaScript());
+            //PropertiesCollection.driver.Manage().Window().setPosition(new Point(-2000, 0));
+            //PropertiesCollection.driver.set_window_position(-2000, 0);
 
             //Navigate to google page
             //PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&amp;Password=&amp;Login=Login﻿");
@@ -211,7 +218,7 @@ namespace Selenium
         public void CleanUp()
         {
             //closes the browser for you after its done with everything
-            Thread.Sleep(9900);
+            Thread.Sleep(9000);
             PropertiesCollection.driver.Close();
             Console.WriteLine("Closed the browser");
         }
